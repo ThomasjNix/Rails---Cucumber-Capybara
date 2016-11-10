@@ -23,11 +23,11 @@ Background: movies have been added to database
 
 Scenario: restrict to movies with "PG" or "R" ratings
   # enter step(s) to check the "PG" and "R" checkboxes
-  When I check the following ratings: "PG" and "R"
+  When I check the following ratings: "PG,R"
   # enter step(s) to uncheck all other checkboxes
-  When I uncheck the following ratings: "G" and "PG-13"
+  When I uncheck the following ratings: "G,PG-13"
   # enter step to "submit" the search form on the homepage
-  When I press "Submit"
+  When I press "Refresh"
   # enter step(s) to ensure that PG and R movies are visible
  Then I should see "The Terminator"
   Then I should see "When Harry Met Sally"
